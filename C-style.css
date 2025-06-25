@@ -411,13 +411,13 @@ i:hover {
     }
 
     .wall-paper h2 {
-        font-size: 30px;
+        font-size: 40px;
         padding: 0;
         color: white; /* ✅ White color for better visibility */
     }
 
     .wall-paper h5 {
-        font-size: 22px;
+        font-size: 20px;
         padding: 0;
     }
 
@@ -593,7 +593,7 @@ i:hover {
     }
   
     .contact-heading {
-      font-size: 24px;
+      font-size: 30px;
       padding-top: 50px;
     }
   
