@@ -1,0 +1,612 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ✅ Navbar Styling */
+#home{
+    width: 100%;
+    min-height:65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4b3620;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+/* ✅ Logo */
+.logo {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-transform: capitalize;
+    padding-left:35px;
+}
+
+/* ✅ Navbar Links */
+.nav-links {
+    display: flex; 
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-family: "Electrolize", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    transition: 0.3s;
+    padding-right: 40px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Hidden Checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* ✅ Label as Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ✅ Sidebar for Mobile */
+@media (max-width: 1024px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #4b3620;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        left: 0;
+    }
+}
+
+/* ✅ Hero Section (Right Side Content, But Text Centered) */
+.wall-paper {
+    width: 100%;
+    min-height: 100vh; 
+    background-image: url("coffee-imges/bg-coffe.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* ✅ Content right side pe shift hoga */
+    justify-content: center;
+}
+.wall-paper h2{
+    font-size: 45px;
+    color: #4b3620;
+    text-transform: capitalize;
+    padding-right:350px;
+    padding-top: 100px;
+}
+
+.wall-paper h5{
+    font-size: 35px;
+    color:white;
+    padding-right:120px;
+    padding-top: 10px;
+}
+.wall-paper p{
+    font-size:20px;
+    padding-right:130px;
+    padding-top: 20px;
+    color:white;
+
+}
+.btn-box{
+    display: flex;
+    margin-top:30px;
+    gap:15px;
+}
+.btn-one{
+    width: 130px;
+    height:40px;
+    border-radius: 20px 20px;
+    text-transform: capitalize;
+    font-family: "Electrolize", sans-serif;
+    font-weight: bold;
+    background-color:#4b3620; ;
+    border:2px solid white;
+    color:white;
+    font-size: 15px;
+}
+.btn-two{
+    width: 130px;
+    height:40px;
+    border-radius: 20px 20px;
+    text-transform: capitalize;
+    font-family: "Electrolize", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border: 3px solid#4b3620; ;
+    color:#4b3620;;
+    margin-right: 300px;
+
+}
+.btn-one:hover,
+.btn-two:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    animation: shake 0.3s ease-in-out;
+}
+.about-section{
+    width: 100%;
+    height:90vh;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top:80px;
+}
+.about-img img{
+    width:60%;
+    min-height: 200px;
+    margin-left:90px;
+}
+.about-content{
+    width:40%;
+    min-height:350px;
+    margin-right: 140px;
+}
+.about-content h3{
+    font-size:40px;
+    text-transform: capitalize;
+    padding-bottom: 50px;
+    padding-top:30px;
+    font-family: "Electrolize", sans-serif;
+    text-align: center;
+    text-decoration: underline ;
+    color: #4b3620;
+
+}
+.about-content p{
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.icon-box{
+    width:200px;
+    height: 40px;
+    display: flex;
+    margin-left:140px;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+i{
+    font-size:25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color:#6F4E37;
+}
+i:hover {
+    color: #6F4E37; /* Change Color on Hover */
+    transform: scale(0.9);
+    text-shadow: 2px 2px 6px #6F4E37;
+
+}
+.menu-heading{
+    text-align: center;
+    color:#6F4E37 ;
+    padding-top:90px;
+    text-transform:uppercase;
+    text-decoration: underline;
+}
+.menu-section{
+    width: 100%;
+    min-height:100vh;
+    border: none;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:20px;
+    margin-top: 10px;
+}
+.card{
+    width:30% ;
+    min-height:420px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px lightgray; 
+    position: relative;
+  transition: border 0.3s ease-in-out;
+}
+.card:hover {
+    border: 3px solid #6F4E37 ;
+  }
+  
+.card img{
+    width:65%;
+    height:280px;
+    object-fit: cover; 
+    margin-left:90px;
+    margin-top: 10px;
+}
+.card h3{
+    margin: 10px 0;
+    font-size:20px;
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card p{
+    font-size: 15px;
+    color:black;
+    text-align: center;
+    padding:5px 5px;
+}
+.gallery-heading{
+    text-align: center;
+    color:#6F4E37 ;
+    padding-top:90px;
+    text-transform:uppercase;
+    text-decoration: underline;
+}
+.gallery-section{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   margin-top: 25px;
+
+}
+.gallery-card{
+    width:30% ;
+    height: 200px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px lightgray; 
+    border-radius: 10px 10px;
+    position: relative;
+}
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image properly fit hogi */
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-card:hover img {
+    transform: scale(1.1);
+    cursor: zoom-in;
+  }
+  .gallery-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Pehle se dark overlay */
+    transition: opacity 0.3s ease-in-out;
+  
+  }
+  .gallery-card:hover::before {
+    opacity:0;
+  }
+  .contact-heading{
+    text-align: center;
+    color:#6F4E37 ;
+    padding-top:150px;
+    text-transform:uppercase;
+    text-decoration: underline;
+  }
+  .contact-section{
+    width:100%;
+    height:60vh; 
+    margin-top: 30px;
+    border:none;
+  }
+  .same{
+    width: 35%;
+    height:50px;
+    margin-left:400px;
+    margin-top: 20px;
+    text-indent: 10px;
+    border: 2px solid black;
+    border-radius: 5px 5px;
+  }
+  .message{
+    width: 35%;
+    height:100px;
+    margin-left:400px;
+    margin-top: 20px;
+    text-indent: 10px;
+    border: 2px solid black;
+    border-radius: 5px 5px;
+  }
+  .message-btn{
+    width:100px;
+    height:30px;
+    margin-left:400px;
+    margin-top:20px;
+    text-transform: capitalize;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 5px 5px;
+    cursor: pointer;
+  }
+  .message-btn:hover{
+    background-color:#6F4E37 ;
+    color: white;
+    border:none;
+    box-shadow: 0 0 10px #a0522d, 0 0 20px #a0522d;
+  }
+  .footer {
+  background-color: #4b3620;
+  color: white;
+  padding: 30px 10px; 
+  margin-top:70px;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  font-size: 20px;
+  color: white;
+  transition: 0.3s ease; 
+  cursor: pointer;
+}
+.footer-heading {
+  font-size: 15px;
+  padding-top: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+}
+
+@media (max-width: 1039px) {
+    .wall-paper h2{
+        color:white;
+    }
+}
+@media (max-width: 581px) {
+    .wall-paper {
+        align-items: center; /* ✅ Text ko center karne ke liye */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .wall-paper h2 {
+        font-size: 30px;
+        padding: 0;
+        color: white; /* ✅ White color for better visibility */
+    }
+
+    .wall-paper h5 {
+        font-size: 22px;
+        padding: 0;
+    }
+
+    .wall-paper p {
+        font-size: 16px;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .btn-box {
+        flex-direction: column; /* ✅ Buttons ek ke neeche ek ho jayenge */
+        align-items: center;
+    }
+
+    .btn-one, .btn-two {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .btn-two {
+        margin-right: 0; /* ✅ Right margin hata diya */
+    }
+}
+@media (max-width: 1024px) {
+    .about-section {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .about-img img {
+        width: 70%; /* Reduced size for tablets */
+        margin: 10px auto; /* Centered and adjusted margin */
+    }
+    .about-content {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .icon-box {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto; /* Centered alignment */
+    }
+}
+
+/* Large Mobile Devices (Max Width: 768px) */
+@media (max-width: 768px) {
+    .about-img img {
+        width: 65%; /* Slightly smaller for large mobiles */
+    }
+    .about-content h3 {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+    .about-content p {
+        font-size: 16px;
+    }
+    .icon-box {
+        width: 180px;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto;
+    }
+}
+
+/* Small Mobile Devices (Max Width: 650px) */
+@media (max-width: 650px) {
+    .about-section {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .about-img img {
+        width: 80%; /* Reduced size for small mobiles */
+        margin: 10px auto;
+    }
+    .about-content {
+        width: 100%;
+        padding: 10px;
+    }
+    .icon-box {
+        width: 150px;
+        display: flex;
+        justify-content:space-between; /* Center icons */
+        margin: 20px auto;
+    }
+    i {
+        font-size: 20px;
+    }
+}
+
+/* .about-footer{
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+} */
+/* 🔹 Tablet screens (768px - 1024px) - 2 columns, reduced width */
+@media screen and (max-width: 1024px) {
+    .card {
+        width: 40%;
+    }
+}
+
+/* 🔹 Large Mobile screens (481px - 767px) - 2 columns */
+@media screen and (max-width: 767px) {
+    .card {
+        width: 48%;
+    }
+}
+
+/* 🔹 Small Mobile screens (320px - 480px) - 1 column & Smaller Centered Image */
+@media screen and (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
+
+    .card img {
+        width: 90%;  /* 👈 Image ka width kam kiya */
+        height: 200px; /* 👈 Image ka height bhi chhoti ki */
+        display: block;
+        margin: 0 auto; /* 👈 Image ko center align kiya */
+        object-fit: contain; /* 👈 Image ko crop hone se bachaya */
+    }
+}
+
+/* 🔹 Extra Small screens (Below 320px) */
+@media screen and (max-width: 320px) {
+    .card img {
+        width: 85%;  /* 👈 Image ka width aur kam kiya */
+        height: 180px; /* 👈 Height aur reduce ki */
+    }
+}
+/* Large Tablets & Small Laptops (2 columns) */
+@media screen and (max-width: 1024px) {
+    .gallery-card {
+        width: 45%;
+    }
+}
+
+/* Tablets & Large Mobile Screens (2 columns) */
+@media screen and (max-width: 768px) {
+    .gallery-card {
+        width: 48%;
+    }
+}
+
+/* Small Mobile Screens (1 column) */
+@media screen and (max-width: 480px) {
+    .gallery-card {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .same,
+    .message,
+    .message-btn {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  
+    .message {
+      height: 120px;
+    }
+  
+    .message-btn {
+      height: 40px;
+      margin-top: 20px;
+    }
+  
+    .contact-heading {
+      font-size: 24px;
+      padding-top: 50px;
+    }
+  
+    .footer {
+      padding: 20px 10px;
+    }
+  
+    .footer-heading {
+      font-size: 13px;
+    }
+  
+    .icons i {
+      font-size: 18px;
+    }
+  }
+  
